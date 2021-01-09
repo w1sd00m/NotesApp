@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Notes App</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="main.js" defer></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+  <header class="topbar">
+    <h1 id="topbar-title" class="topbar-title">Your Notes</h1>
+    
+    <div class="toolbar">
+      <i class="material-icons" id="btn-create-note" onclick="createNote()" data-active="true">add</i>
+      <i class="material-icons" id="btn-inspect-note" onclick="inspectNote()" data-active="false">remove_red_eye</i>
+      <i class="material-icons" id="btn-edit-note" onclick="editNote()" data-active="false">edit</i>
+      <i class="material-icons" id="btn-remove-note" onclick="deleteNote()" data-active="false">delete</i>
+      <i class="material-icons" id="btn-save-changes" onclick="saveChanges()" data-active="false">done</i></li>
+      <i class="material-icons" id="btn-discard-changes" onclick="cancelChanges()" data-active="false">close</i>
+    </div>
+  </header>
+  
+  <main class="content-container">
+    <ul id="notes-list" class="notes-list" data-active="true">
+      
+    </ul>
+    
+    <div id="inspector" class="inspector" data-active="false">
+      <div id="note-info" class="note-info" data-active="true">
+        <p>Created:&nbsp;<span id="note-creation-date"></span></p>
+        <p>Modified:&nbsp;<span id="note-modified-date"></span></p>
+      </div>
+      <input type="text" id="note-title" placeholder="Title" />
+      <textarea id="note-contents" placeholder="Contents"></textarea>
+    </div>
+  </main>
+<body>
+</body>
+</html>
